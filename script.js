@@ -5,12 +5,14 @@ $(document).ready(function(){
     $(".saveBtn").on("click", function(){
         var textvalue = $(this).siblings(".description").val()
         var id = $(this).parent().attr("id")
-        window.localStorage.setItem(id, textvalue)        
+        window.localStorage.setItem(id, textvalue)          
     })
 function updatehour () {
     var currenthour = moment().hours();
+    console.log(currenthour)
     $(".time-block").each(function(){
         var blockhour = $(this).attr("id")
+        console.log(blockhour)
         if (blockhour < currenthour) {
             $(this).addClass("past")
         }
@@ -25,18 +27,18 @@ function updatehour () {
         }
     })
 }
-updatehour (); 
 
+updatehour();
 var interval = setInterval(updatehour, 15000);
-$("#9am .description").val(localStorage.getItem("9am"))
-$("#10am .description").val(localStorage.getItem("10am"))
-$("#11am .description").val(localStorage.getItem("11am"))
-$("#12pm .description").val(localStorage.getItem("12pm"))
-$("#1pm .description").val(localStorage.getItem("1pm"))
-$("#2pm .description").val(localStorage.getItem("2pm"))
-$("#3pm .description").val(localStorage.getItem("3pm"))
-$("#4pm .description").val(localStorage.getItem("4pm"))
-$("#5pm .description").val(localStorage.getItem("5pm"))
+$("#9 .description").val(localStorage.getItem("9"))
+$("#10 .description").val(localStorage.getItem("10"))
+$("#11 .description").val(localStorage.getItem("11"))
+$("#12 .description").val(localStorage.getItem("12"))
+$("#13 .description").val(localStorage.getItem("13"))
+$("#14 .description").val(localStorage.getItem("14"))
+$("#15 .description").val(localStorage.getItem("15"))
+$("#16 .description").val(localStorage.getItem("16"))
+$("#17 .description").val(localStorage.getItem("17"))
 
 })
 
