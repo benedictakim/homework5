@@ -16,7 +16,7 @@ function updatehour () {
         if (blockhour < currenthour) {
             $(this).addClass("past")
         }
-        else if(blockhour = currenthour) {
+        else if(blockhour === currenthour) {
             $(this).removeClass("past")
             $(this).addClass("present")            
         }
